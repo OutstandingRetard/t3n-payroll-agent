@@ -1,0 +1,22 @@
+{
+  "name": "t3n-payroll-agent",
+  "version": "1.0.0",
+  "description": "Enterprise payroll-boundary agent built on the Terminal 3 (T3N) ADK. Authenticates a verified DID in a TEE, resolves placeholder account references inside the enclave, and triggers bank transfers WITHOUT the agent ever holding raw account numbers.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "auth:check": "tsx src/auth_check.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["t3n", "terminal3", "adk", "agent", "payroll", "tee", "did", "enterprise"],
+  "license": "MIT",
+  "dependencies": {
+    "@terminal3/t3n-sdk": "^5.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
